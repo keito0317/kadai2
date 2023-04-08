@@ -29,7 +29,8 @@ function measureTime(){
 
 
 //スタートボタンがクリックされたら時間を進める//
-function start(){
+function clickbutton(start) {
+  console.log(start)
   startTime = Date.now()
   measureTime(
   startButton.disabled = true;
@@ -38,7 +39,8 @@ function start(){
 }
 
 //ストップボタンがクリックされたら時間を止める//
-function stop(){
+function clickbutton(stop) {
+  console.log(stop)
   clearInterval(timer)
   holdTime += Date.now() - startTime;
   
@@ -48,7 +50,8 @@ function stop(){
 }
 
 //リセットボタンがクリックされたら時間を０に戻す//
-function reset(){
+function clickbutton(reset) {
+  console.log(reset)
   clearInterval(timer)
   elapsedTime = 0;
   holdTime = 0;
